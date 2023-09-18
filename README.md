@@ -33,7 +33,8 @@ grid.MoveValueToPosition(value, 3, 9);
 - You can search the Grid for Values
 ``` c#
 // Gets an X, Y position Tuple for the Node with the given Value
-// (given everything previously done, the Tuple Values will be x:3, y:9) and sets local x and y values to the Tuple values.
+// (given everything previously done, the Tuple Values will be x:3, y:9)
+// and sets local x and y values to the Tuple values.
 var position = grid.GetPositionOf(value);
 var x = position.x;
 var y = position.y;
@@ -58,6 +59,7 @@ var predicateAdjacent = grid.GetAdjacentMathcingPredicate(x, y, predicate);
 var predicateRange = grid.GetRangeMatchingPredicate(x, y, range, predicate);
 
 // Finally, you can search iteratively for values based on a predicate,
-// starting from the position, and continuing until the conditions of the predicate are not met for any of the relative Nodes.
+// starting from the position, 
+// and continuing until the conditions of the predicate are not met for any of the relative Nodes.
 var searchdNodes = grid.SearchFromPointMatchingPredicate(x, y, predicate);
 ```
